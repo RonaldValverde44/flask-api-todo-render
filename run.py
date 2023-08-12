@@ -11,7 +11,7 @@ app.app_context().push()
 
 db = SQLAlchemy()
 app.config["SQLALCHEMY_DATABASE_URI"] = config('DATABASE_URI')
-app.config['SQLALCHEMY_TRACK_NODIFICATIONS'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db.init_app(app)
 
 class Tarea(db.Model):
